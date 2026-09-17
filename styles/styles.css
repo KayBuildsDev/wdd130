@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 600px;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+aside {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #333;
+    padding: 15px;
+    background-color: #eef2f7;
+    color: #222;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
