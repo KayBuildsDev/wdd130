@@ -1,3 +1,9 @@
+:root {
+    --border-color: #333;
+    --border: 1px solid var(--border-color);
+    --spacing-md: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,15 +34,15 @@ img {
 
 aside {
     width: 300px;
-    margin: 20px;
-    border: 1px solid #333;
+    margin: var(--spacing-md);
+    border: var(--border);
     padding: 15px;
     background-color: #eef2f7;
     color: #222;
 }
 
 footer {
-    margin-top: 20px;
-    border-top: 1px solid #333;
+    margin-top: var(--spacing-md);
+    border-top: var(--border);
     text-align: center;
 }
