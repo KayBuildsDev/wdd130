@@ -1,26 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --border-color: #333;
     --border: 1px solid var(--border-color);
     --spacing-md: 20px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
+    --box-bg: #eef2f7;
+    --box-color: #222;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 main {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 main img {
     width: 150px;
     height: auto;
+    float: right;
+    margin-left: var(--spacing-md);
 }
 
 p {
@@ -33,16 +42,35 @@ img {
 }
 
 aside {
-    width: 300px;
-    margin: var(--spacing-md);
-    border: var(--border);
-    padding: 15px;
-    background-color: #eef2f7;
-    color: #222;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 0.25rem 0.75rem;
 }
 
 footer {
     margin-top: var(--spacing-md);
     border-top: var(--border);
     text-align: center;
+}
+
+/* ==========================
+   Class Selectors
+   ========================== */
+
+.box {
+    margin: 1rem;
+    border: var(--border);
+    padding: 1rem;
+    background-color: var(--box-bg);
+    color: var(--box-color);
+    overflow: hidden;
 }
