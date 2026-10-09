@@ -51,12 +51,7 @@ header nav ul {
 
 header nav ul li {
     flex: 1;
-    border: 1px solid var(--primary-color);
     border-left: none;
-}
-
-header nav ul li:first-child {
-    border-left: 1px solid var(--primary-color);
 }
 
 header nav ul li a {
@@ -154,26 +149,7 @@ article {
     height: auto;
 }
 
-footer {
-    padding: 16px;
-    background-color: var(--accent1-color);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-}
-
-main h1 {
+.contact h1 {
     text-align: center;
     margin-top: 24px;
 }
@@ -185,25 +161,25 @@ address {
     margin-bottom: 24px;
 }
 
-main {
+.contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
 }
 
-main h1,
+.contact h1,
 address,
-main section.profile-panel {
+.contact section.profile-panel {
     grid-column: 1 / -1;
 }
 
-main iframe {
+.contact iframe {
     width: 100%;
     height: 300px;
     border: 0;
 }
 
-main form {
+.contact form {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -227,9 +203,7 @@ form fieldset {
     column-gap: 8px;
     row-gap: 8px;
     align-items: center;
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-    padding: 8px 12px;
+    border: none;
 }
 
 form fieldset legend {
@@ -269,4 +243,23 @@ form button[type="submit"] {
     height: 120px;
     object-fit: cover;
     border-radius: 4px;
+}
+
+footer {
+    padding: 16px;
+    background-color: var(--accent1-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
 }
