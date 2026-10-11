@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light;
     --primary-color: #1d5b79;
     /* deep river blue */
     --secondary-color: #5fb3d9;
@@ -20,6 +21,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: #fff;
 }
 
 header,
@@ -29,6 +31,7 @@ footer {
     margin: 0 auto;
 }
 
+/* Header / nav (shared across every page) */
 header {
     background-color: #fff;
     border-bottom: 4px solid var(--primary-color);
@@ -71,7 +74,8 @@ nav a:hover {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -84,6 +88,168 @@ article {
     padding: 8px;
 }
 
+/* Shared, reusable components */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent1-color);
+}
+
+.panel {
+    background-color: #f2f2f2;
+    border: 1px solid var(--accent1-color);
+    text-align: center;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+}
+
+form fieldset {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 8px;
+    row-gap: 8px;
+    align-items: center;
+    border: none;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Home page */
+.home-hero {
+    position: relative;
+}
+
+.home-hero img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.home-hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    color: #fff;
+}
+
+.home-hero .hero-text h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.home-hero .hero-text p {
+    margin: 8px 0 16px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.home-hero .cta-button {
+    background-color: var(--accent2-color);
+    color: black;
+}
+
+.home-hero .cta-button:hover {
+    background-color: #fff;
+}
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 600px;
+    margin: 16px auto 0;
+}
+
+.newsletter .field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.newsletter label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+}
+
+.newsletter button:hover {
+    background-color: var(--accent1-color);
+}
+
+.offerings {
+    text-align: center;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.offerings-grid figure {
+    margin: 0;
+}
+
+.offerings-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.offerings-grid figcaption {
+    padding: 12px 0;
+    text-align: left;
+}
+
+.offerings-grid h3 {
+    margin-bottom: 4px;
+}
+
+/* About page */
 .hero {
     position: relative;
 }
@@ -149,6 +315,80 @@ article {
     height: auto;
 }
 
+/* Trips page */
+.trips h1 {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.trips-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 8px auto 0;
+}
+
+.trip-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.trip-cards h2 {
+    grid-column: 1 / -1;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.trip-card div {
+    padding: 12px;
+}
+
+.trip-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid var(--secondary-color);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.trip-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.trip-cta {
+    margin-top: 24px;
+}
+
+/* Contact page */
 .contact h1 {
     text-align: center;
     margin-top: 24px;
@@ -185,48 +425,6 @@ address,
     gap: 12px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-    font-family: var(--body-font);
-}
-
-form fieldset {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 8px;
-    row-gap: 8px;
-    align-items: center;
-    border: none;
-}
-
-form fieldset legend {
-    font-weight: bold;
-    padding: 0 4px;
-}
-
-form button[type="submit"] {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.profile-panel {
-    background-color: #f2f2f2;
-    border: 1px solid var(--accent1-color);
-    text-align: center;
-}
-
 .profile-grid {
     display: flex;
     justify-content: center;
@@ -245,6 +443,7 @@ form button[type="submit"] {
     border-radius: 4px;
 }
 
+/* Footer (shared across every page) */
 footer {
     padding: 16px;
     background-color: var(--accent1-color);
